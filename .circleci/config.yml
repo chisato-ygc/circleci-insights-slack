@@ -54,10 +54,10 @@ jobs:
 
 workflows:
   insightdata:
-   # when:
-     # and:
-      #  - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
-      #  - equal: [ "insight_schedule", << pipeline.schedule.name >> ]
+    when:
+      and:
+        - equal: [ scheduled_pipeline, << pipeline.trigger_source >> ]
+        - equal: [ "insight_schedule", << pipeline.schedule.name >> ]
     jobs:
       - insightsdata:
           project-name: "machine-executor-images"
