@@ -50,10 +50,10 @@ workflows:
   insightdata:
     jobs:
       - insightsdata:
-          project-name: "insights-test-repo"
-          org-name: "testorg"
+          project-name: "machine-executor-images"
+          org-name: "circleci"
           vcs-name: "gh"
           workflow-names: "build_all_images,daily"
           reporting-window: "30-days"
           context:
-            - slack-secrets
+            - Slack_notify
