@@ -56,4 +56,4 @@ workflows:
           workflow-names: "build_all_images,daily"
           reporting-window: "30-days"
           context:
-            - Slack_notify
+            - Slack
